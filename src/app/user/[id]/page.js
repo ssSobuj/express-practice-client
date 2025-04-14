@@ -30,7 +30,7 @@ function UserDetailPage() {
     setError(null); // Reset error
     setUpdateSuccess(false); // Reset success message
 
-    fetch(`http://localhost:5000/users/${id}`) // Use the correct API endpoint (_id)
+    fetch(`http://localhost:5000/api/users/${id}`) // Use the correct API endpoint (_id)
       .then((response) => {
         if (!response.ok) {
           if (response.status === 404) {
@@ -101,7 +101,7 @@ function UserDetailPage() {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/users/${id}`, {
+      const response = await fetch(`http://localhost:5000/api/users/${id}`, {
         // Use PATCH for partial updates
         method: "PATCH",
         headers: {

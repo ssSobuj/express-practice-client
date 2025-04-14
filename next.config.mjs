@@ -7,8 +7,8 @@ const nextConfig = {
         destination: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/:path*`,
       },
       {
-        source: "/users/:path*",
-        destination: `${process.env.NEXT_PUBLIC_BACKEND_URL}/users/:path*`,
+        source: "/api/users/:path*",
+        destination: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/users/:path*`,
       },
     ];
   },
